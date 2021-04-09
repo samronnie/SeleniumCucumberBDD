@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BDD Test Suite" verbose="1" thread-count="5"
+       configfailurepolicy="continue" parallel="tests">
+
+    <test name="ChromeExecution" annotations="JDK" preserve-order="true">
+        <parameter name="environment" value="QA"/>
+        <parameter name="browserName" value="chrome"/>
+        <parameter name="isHeadless" value="false"/>
+        <classes>
+            <class name="Runner.TestNgCucumberScenarioRunner"/>
+        </classes>
+    </test>
+
+    <!--        <test name="FireFoxExecution" annotations="JDK" preserve-order="true">-->
+    <!--            <parameter name="environment" value="QA"/>-->
+    <!--            <parameter name="EXECUTION_ENVIRONMENT" value="browserStack"/>-->
+    <!--            <parameter name="isSlackNotification" value="false"/>-->
+    <!--            <parameter name="testEnvironment" value="test3"/>-->
+    <!--            <parameter name="baseURL"-->
+    <!--                       value="http://bddautomation.test3.virtuagym.com/"/>-->
+    <!--            <parameter name="browserName" value="firefox"/>-->
+    <!--            <parameter name="isHeadless" value="false"/>-->
+    <!--            <classes>-->
+    <!--                <class name="MyRunner.TestRunner"/>-->
+    <!--            </classes>-->
+    <!--        </test>-->
+
+</suite>
